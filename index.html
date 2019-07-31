@@ -8,25 +8,29 @@
 
 <body>
 
-  <h2><a href="http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" target="_blank">Loupe</a> Links</h2>
+  <h2><a href="http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" target="_blank">Louping</a></h2>
   <p>
-    because Loupe visualizations can glitch if you change the snippet and rerun too many times, it's best for students to start with a fresh tab each exercise.  so permalinks
+    because Loupe visualizations can glitch if you change the snippet and rerun too many times, it's best for students to start with a fresh tab each exercise.  so permalouping
     <br><br>
     (code can't have syntax errors or Loupe will open to a blank editor)
   </p>
   <div>
+    <button id="copy-snippet">copy snippet</button>
     <button id="open-in-loupe">open in loupe</button> <br>
-    <button id="gen-permalink">generate permalink</button>
-    <input id="display-permalink" ></input> <br>
-    <button id="copy-snippet">copy snippet</button> <br>
-    <button id="encode-snippet">encode snippet</button>
-    <input id="display-encoded" ></input>
+    <button id="gen-loupe-permalink">loupe permalink</button>
+    <input id="display-loupe-permalink" ></input> <br>
   </div>
   <div id="editor" style="position:relative;width:100%;height:500px;border: 1px solid black;"></div>
+  <div>
+    <button id="gen-louping-permalink">louping permalink</button>
+    <input id="display-louping-permalink" ></input> <br>
+    <button id="loupe-encode-snippet">query for loupe URL</button>
+    <input id="display-encoded" ></input>
+  </div>
 
   <br><br>
   <hr>
-  <p> <a href="https://github.com/janke-learning/loupe-links" target="_blank">loupe-links source code</a>, powered by <a href="https://github.com/ajaxorg/ace" target="_blank">  ace </a>
+  <p> <a href="https://github.com/janke-learning/louping" target="_blank">louping source code</a>, powered by <a href="https://github.com/ajaxorg/ace" target="_blank">  ace </a>
 
 
   <hr>  
@@ -45,6 +49,12 @@
     editor.setFontSize(16);
     editor.getSession().setTabSize(2);
     editor.setAutoScrollEditorIntoView(true);
+
+    var query_code = read_query('code');
+    if (query_code) {
+      editor.setValue(louping_decode(query_code));
+    };
+
   </script>
   
 </body>
