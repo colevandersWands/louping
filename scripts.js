@@ -35,6 +35,25 @@ function gen_permalink_handler() {
 var gen_permalink_button = document.getElementById("gen-permalink");
 gen_permalink_button.addEventListener("click", gen_permalink_handler);
 
+function copy_snippet_handler() {
+  var code = editor.getValue();
+  copy_to_clipboard(code); 
+  alert('snippet is copied');
+}
+var copy_snippet_button = document.getElementById("copy-snippet");
+copy_snippet_button.addEventListener("click", copy_snippet_handler);
+
+function encode_snippet_handler() {
+  var code = editor.getValue();
+  var encoded = encode(code)+"!!!";
+  var encoded_display = document.getElementById("display-encoded");
+  encoded_display.value = encoded;
+  copy_to_clipboard(encoded); 
+  alert('copied encoded code, paste into a loupe url to load it');
+}
+var encode_snippet_button = document.getElementById("encode-snippet");
+encode_snippet_button.addEventListener("click", encode_snippet_handler);
+
 
 // ----- copy-pasting functions ------
 
